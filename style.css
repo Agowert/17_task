@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 40px 0;
+}
+
+.logo {
+    float: left;
+    font-size: 40px;
+    font-weight: bold;
+    color: #1b2144;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    float: left;
+    margin-left: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1b2144;
+    font-size: 14px;
+}
+
+.btn-nav {
+    border: 1px solid #ff9f9f;
+    padding: 12px 25px;
+    border-radius: 30px;
+}
+
+.banner {
+    margin-top: 80px;
+}
+
+.left {
+    float: left;
+    width: 45%;
+    margin-top: 80px;
+}
+
+.right {
+    float: right;
+    width: 50%;
+}
+
+.right img {
+    width: 120%;
+}
+
+.left h1 {
+    font-size: 50px;
+    color: #141a4b;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.left p {
+    width: 420px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.btn-blue,
+.btn-white {
+    display: inline-block;
+    padding: 18px 40px;
+    border-radius: 35px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.btn-blue {
+    background: #3454ff;
+    color: white;
+}
+
+.btn-white {
+    border: 1px solid #ff9f9f;
+    color: #1b2144;
+}
+
+.clear {
+    clear: both;
+}
+
+.brands {
+    margin: 200px 0 0 0;
+    width: 100%;
+    text-align: right;
+    font-size: 0; 
+}
+
+.brands img {
+    display: inline-block;
+    float: none;
+    width: 10%;
+    height: 40px;      
+    object-fit: contain;   
+    object-position: center;
+    vertical-align: bottom;  
+    margin: 0 1%;         
+    margin-bottom: 10px;
+}
+
+.brands img:first-child {
+    margin-left: 0;
+}
+.brands img:last-child {
+    margin-right: 0;
+}
+
+.logo,
+nav li,
+.left h1,
+.left p,
+.left .btn-blue,
+.left .btn-white,
+.brands img {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000), 
+                transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.right img {
+    opacity: 0;
+    transition: opacity 1.2s ease-out;
+}
+
+body.loaded .logo,
+body.loaded nav li,
+body.loaded .left h1,
+body.loaded .left p,
+body.loaded .left .btn-blue,
+body.loaded .left .btn-white,
+body.loaded .brands img {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.loaded .right img {
+    opacity: 1;
+}
+
+body.loaded .logo {
+    transition-delay: 0s;
+}
+
+body.loaded nav li {
+    transition-delay: 0.1s;
+}
+
+body.loaded .left h1 {
+    transition-delay: 0.25s;
+}
+
+body.loaded .left p {
+    transition-delay: 0.4s;
+}
+
+body.loaded .left .btn-blue,
+body.loaded .left .btn-white {
+    transition-delay: 0.55s;
+}
+
+body.loaded .right img {
+    transition-delay: 0.7s;
+}
+
+body.loaded .brands img {
+    transition-delay: 0.85s;
+}
